@@ -2,7 +2,7 @@
 local _, ns = ...
 local cfg = ns.cfg.GROUP_INVITES
 
--- Play LFG,LFR and BG invite sounds when sound is muted
+-- Play LFG,LFR and BG invite sound effects when sound is muted
 
 if cfg["ENABLED"] then
 

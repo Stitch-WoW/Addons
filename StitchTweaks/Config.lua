@@ -1,7 +1,6 @@
 
 local addon, ns = ...
 
--- CONFIG ----------------------------------{{{
 ns.cfg = { 
   AUTO_REPAIR = {
     ENABLED = true,
@@ -32,5 +31,3 @@ ns.cfg = {
     ENABLED = true
   },
 }
----------------------------------------------}}}
-

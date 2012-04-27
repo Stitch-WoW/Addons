@@ -3,7 +3,7 @@ local _, ns = ...
 local cfg = ns.cfg.ENCHANT_PREVIEW
 
 -- Slash command to easily preview a weapon with a certain enchant
--- Only handles a few enchants, and has no error checks, usage:
+-- Only handles some enchants, and has no error checks, usage:
 -- /enchant [itemlink] enchantname
 
 if cfg["ENABLED"] then
