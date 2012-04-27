@@ -1,0 +1,6 @@
+## Interface: 40300
+## Title: SessionWatch
+## Author: Stitch (US-Caelestrasz)
+## Notes: Simple tracking of the current session's rep, honor and money gains
+
+SessionWatch.lua

@@ -1,0 +1,7 @@
+## Interface: 40300
+## Title: MailAlts
+## Notes: Send mail auto completion priority for your alts
+## Author: Stitch (US-Caelestrasz)
+## SavedVariables: MailAltsDB
+
+MailAlts.lua

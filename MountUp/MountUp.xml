@@ -1,0 +1,45 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+
+  <Frame name="MountUpFrame" toplevel="true" parent="UIParent" enableMouse="true">
+    <Size x="32" y="32"/>
+    <Anchors>
+      <Anchor point="BOTTOMLEFT"/>
+    </Anchors>
+    <Frames>
+      <Button name="MountUpButton">
+        <Size x="24" y="24" />
+        <Anchors>
+          <Anchor point="CENTER"/>
+        </Anchors>
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="$parentIconTexture" file="Interface\Icons\Ability_Mount_PolarBear_White" setAllPoints="true"/>
+          </Layer>
+          <Layer level="OVERLAY">
+            <Texture name="$parentBorder" file="Interface\TalentFrame\TalentFrame-Parts" setAllPoints="true">
+              <Size x="32" y="32" />
+              <Anchors>
+                <Anchor point="CENTER"/>
+              </Anchors>
+              <TexCoords left="0.73046875" right="0.96093750" top="0.13671875" bottom="0.25195313"/>
+            </Texture>
+          </Layer>
+        </Layers>
+        <Scripts>
+          <OnMouseDown>
+            MountUp_OnClick(self, button)
+          </OnMouseDown>          
+        </Scripts>
+      </Button>
+    </Frames>
+    <Scripts>
+      <OnLoad>
+        MountUp_OnLoad(self)
+      </OnLoad>
+      <OnEvent>
+        MountUp_OnEvent(self, event, ...)
+      </OnEvent>
+    </Scripts>
+  </Frame>
+
+</Ui>

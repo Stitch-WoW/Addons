@@ -1,0 +1,6 @@
+## Interface: 40300
+## Title: DiabloComboBar
+## Notes: Standalone combo point bar like oUF_Diablo, using rTextures
+## Author: Stitch (US-Caelestrasz)
+
+DiabloComboBar.lua

@@ -1,0 +1,6 @@
+## Interface: 40340
+## Title: RaidBuddy
+## Notes: Simple raid group forming and loot setup for soloing raids
+## Author: Stitch (US-Caelestrasz)
+
+RaidBuddy.lua

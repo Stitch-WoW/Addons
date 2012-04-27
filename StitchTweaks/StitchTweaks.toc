@@ -1,0 +1,16 @@
+## Interface: 40300
+## Title: StitchTweaks
+## Notes: A collection of various small UI additions, changes and automations
+## Author: Stitch (US-Caelestrasz)
+
+Config.lua
+
+AutoRepair.lua
+EnchantPreview.lua
+GroupInvites.lua
+InspectILVL.lua
+PaperDoll.lua
+QuestRewardValue.lua
+SkipGossip.lua
+Tooltips.lua
+VendorTrash.lua
