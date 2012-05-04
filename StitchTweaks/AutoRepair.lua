@@ -10,7 +10,7 @@ repairFrame:SetScript("OnEvent", function()
   else
     local repairCost, repairAvail = GetRepairAllCost()
     if repairAvail then
-      if cfg["GUILD_REPAIRS"] then
+      if cfg["GUILD_REPAIRS"] and CanGuildBankRepair() then
         RepairAllItems(1)
         print("|c0033AAFFItems repaired for|r", GetCoinTextureString(repairCost), "|c0033AAFF(Guild)|r")
       else
