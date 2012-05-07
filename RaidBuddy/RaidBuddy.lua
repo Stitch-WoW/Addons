@@ -4,11 +4,7 @@
 
 
 -- CONFIG
-local CHAR_TO_INVITE = { 
-  ["Horde"]    = "Raidbuddy",
-  ["Alliance"] = "Raidbud",
-}
-          
+local CHAR_TO_INVITE = "Raidbuddy"          
 local LOGOUT_ALT = true
 
 local Leader = nil
@@ -37,9 +33,6 @@ function RaidBuddy:Enable()
   self:SetScript("OnEvent", function(self,event,...)
     self[event](self,event,...)
   end)
-
-  local faction = UnitFactionGroup("player")
-  CHAR_TO_INVITE = CHAR_TO_INVITE[faction]
 end
 
 function RaidBuddy:Disable()
