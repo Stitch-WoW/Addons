@@ -39,7 +39,7 @@ function RaidBuddy:Enable()
   end)
 
   local faction = UnitFactionGroup("player")
-  CHAR_TO_INVITE == CHAR_TO_INVITE[faction]
+  CHAR_TO_INVITE = CHAR_TO_INVITE[faction]
 end
 
 function RaidBuddy:Disable()
