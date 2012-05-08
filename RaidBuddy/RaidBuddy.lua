@@ -4,14 +4,15 @@
 
 
 -- CONFIG
-local CHAR_TO_INVITE = "Raidbuddy"          
+local CHAR_TO_INVITE = {
+  ["Alliance"] = "Raidbud",
+  ["Horde"]    = "Raidbuddy"
+}
+
 local LOGOUT_ALT = true
 
+local Faction = nil
 local Leader = nil
-
-if UnitName("player") ~= CHAR_TO_INVITE then
-  Leader = true
-end
 
 local RaidBuddy = CreateFrame("Frame", nil, UIParent)
 RaidBuddy:RegisterEvent("PLAYER_LOGIN")
@@ -20,6 +21,11 @@ RaidBuddy:SetScript("OnEvent", function(self,event,...)
 end)
 
 function RaidBuddy.PLAYER_LOGIN(self, event)
+  Faction = UnitFactionGroup("player")
+  if UnitName("player") ~= CHAR_TO_INVITE[Faction] then
+    Leader = true
+  end
+
   if Leader then
     self:RegisterEvent("PARTY_CONVERTED_TO_RAID")
     self:RegisterEvent("PARTY_MEMBERS_CHANGED")
@@ -44,13 +50,13 @@ function RaidBuddy:PARTY_INVITE_REQUEST()
 end
 
 function RaidBuddy:PARTY_MEMBERS_CHANGED()
-  if UnitInParty(CHAR_TO_INVITE) then
+  if UnitInParty(CHAR_TO_INVITE[Faction]) then
     ConvertToRaid()
   end
 end
 
 function RaidBuddy:PARTY_CONVERTED_TO_RAID()
-  if Leader and UnitInParty(CHAR_TO_INVITE) then
+  if Leader and UnitInParty(CHAR_TO_INVITE[Faction]) then
     SetLootMethod("freeforall")
     self:Disable()
   end
@@ -62,7 +68,7 @@ end
 
 function RaidBuddy:StartRaid()
   if GetNumPartyMembers() == 0 then
-    InviteUnit(CHAR_TO_INVITE)
+    InviteUnit(CHAR_TO_INVITE[Faction])
   end
 end
 

@@ -14,6 +14,13 @@ if cfg["ENABLED"] then
     end
     PlaySound("ReadyCheck", "Master")
   end
+
+  local function IsBGInvite()
+    if StaticPopup1.which == "CONFIRM_BATTLEFIELD_ENTRY" then
+      PlayInviteSound()
+    end
+  end
+  StaticPopup1:HookScript("OnShow", IsBGInvite)
   LFGDungeonReadyPopup:HookScript("OnShow", PlayInviteSound)
 
 end
